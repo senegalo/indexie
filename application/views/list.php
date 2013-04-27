@@ -1,20 +1,27 @@
-<?php
-foreach ($list as $result):
-    $hoba = true;
-?>
 
-<div class="search-list-item" data-id="<?php print $result->id; ?>">
-    <div class="search-list-item-name">
-        <div class="search-list-item-tradename"><?php print $result->tradeName; ?></div>
-        <div class="search-list-item-genericname"><?php print $result->genericName; ?></div>
-    </div>
-    <div class="search-list-item-price">EGP <?php print $result->packPrice; ?></div>
-    <div style="clear:both;"></div>
-</div>
+<?php $this->load->view("home", array("query"=>$query)); ?>
 
-<?php
-endforeach;
-if(!isset($hoba)):
-?>
-<div style="width:100%;text-align: center;"><em>No results found...</em></div>
-<?php endif; ?>
+<table class="table table-hover table-striped">
+
+    <?php
+    foreach ($list as $result):
+        $hoba = true;
+        ?>
+        <tr data-id="<?php print $result->id; ?>">
+            <td style="width:85%;">
+                <strong><?php print $result->tradeName; ?></strong><br/>
+                <small><em><?php print $result->genericName; ?></em></small>
+            </td>
+            <td style="width:15%">
+                EGP <?php print $result->packPrice; ?>
+            </td>
+        </tr>
+        <?php
+    endforeach;
+    if (!isset($hoba)):
+        ?>
+        <tr> 
+            <td style="width:100%;text-align: center;"><em>No results found...</em></td>
+        </tr>
+    <?php endif; ?>
+</table>
