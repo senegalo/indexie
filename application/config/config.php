@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://www.eyerollweb.com/di-mobileweb';
+$config['base_url']	= 'http://localhost/di-mobileweb';
 
 /*
 |--------------------------------------------------------------------------

@@ -1,22 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <meta name="viewport" content="width=device-width; initial-scale = 1.0; maximum-scale=1.0; user-scalable=no" />
         <title>INDEXIE</title>
+
+        <link href="<? print base_url('public/css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css"/>
+        <link href="<? print base_url('public/css/bootstrap-responsive.min.css'); ?>" rel="stylesheet" type="text/css"/>
         <link href="<? print base_url('public/css/main.css'); ?>" rel="stylesheet" type="text/css"/>
+
         <script src="<?php print base_url('public/js/jquery.js'); ?>" type="text/javascript"></script>
+        <script src="<?php print base_url('public/js/bootstrap.min.js'); ?>" type="text/javascript"></script>
+
         <?php
-            if(isset($scripts)){
-                foreach($scripts as $script)
-                $this->load->view("scripts/".$script); 
-            }
-         ?>
+        if (isset($scripts)) {
+            foreach ($scripts as $script)
+                $this->load->view("scripts/" . $script);
+        }
+        ?>
     </head>
     <body>
-        <div class="header-logo">
-            <div style="padding:10px;">
-                <a href="<?php print base_url(); ?>">
-                    <img src="<?php print base_url('public/images/small_logo.png'); ?>" alt="INDEXIE" style="border:0;max-width: 45%"/>
-                </a>
+        <div class="container">
+            <div style="text-align:center;">
+                <div class="header-logo">
+                    <a href="<?php print base_url(); ?>">
+                        <img src="<?php print base_url('public/images/small_logo_black.png'); ?>" alt="INDEXIE" style="border:0;"/>
+                    </a>
+                </div>
             </div>
-        </div>
