@@ -14,14 +14,11 @@
                                 q: query
                             },
                             success: function(data) {
-                                theSuggestions.empty();
                                 var out = [];
                                 if (data["suggestions"]) {
-                                    for (var item in data['suggestions']) {
-                                        out.push(data['suggestions'][item]);
-                                    }
+                                    return process(data["suggestions"]);
                                 }
-                                return out;
+                                return [];
                             },
                             error: function() {
                                 return [];
