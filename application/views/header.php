@@ -9,11 +9,15 @@
 
         <script src="<?php print base_url('public/js/jquery.js'); ?>" type="text/javascript"></script>
         <script src="<?php print base_url('public/js/bootstrap.min.js'); ?>" type="text/javascript"></script>
+        <script src="<?php print base_url('public/js/core.js'); ?>" type="text/javascript"></script>
 
         <?php
         if (isset($scripts)) {
-            foreach ($scripts as $script)
-                $this->load->view("scripts/" . $script);
+            foreach ($scripts as $script):
+                ?>
+        <script src="<?php print base_url('public/js/'.$script.'.js'); ?>" type="text/javascript"></script>
+                <?php
+            endforeach;
         }
         ?>
     </head>
