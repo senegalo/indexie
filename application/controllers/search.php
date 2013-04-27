@@ -16,22 +16,25 @@ class Search extends CI_Controller {
         parent::__construct();
     }
 
-    public function index() {
+    public function i($query) {
 
         $data = array('list' => array());
 
-        $data['query'] = $this->input->get('q',true);
+        $data['query'] = $query;
         
         $this->load->model('api');
-
-        $data['list'] = $this->api->search($data['query']);
+        
+        $data['list'] = $this->api->search($query);
         if (!isset($data['list']->groups[0])) {
             $data['list'] = array();
         } else {
             $data['list'] = $data['list']->groups[0]->results;
         }
 
-        $this->load->view("header", array("scripts" => array("list","suggest")));
+        $this->load->view("header", array("scripts" => array("list","home")));
+        
+        $this->load->view("home", array("query"=>$query));
+        
         $this->load->view("list", $data);
         $this->load->view("footer");
     }

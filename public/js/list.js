@@ -1,7 +1,7 @@
 $(function() {
-    $(".search-list-item").on({
-        "click": function() {
-            location.href = Indexie.config.baseURL + '/' + $(this).data("id");
+    $(".search-results").on({
+        click: function() {
+            location.href = Indexie.config.baseURL + '/drug/i/' + $(this).data("id") + '/' + $("#search-box").val();
         }
-    });
+    },"tr");
 });

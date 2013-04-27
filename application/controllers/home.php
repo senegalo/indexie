@@ -9,7 +9,7 @@ class Home extends CI_Controller {
         
         $api = $this->config->item('api');
         
-        $this->load->view('header',array("scripts"=>array("suggest")));
+        $this->load->view('header',array("scripts"=>array("home")));
         $this->load->view('home');
         $this->load->view('footer');
     }

@@ -2,49 +2,21 @@
     padding: 20px
 }
 
-.header-container {
-    background-color: #0fb29d;
-}
+/******* Search results *******/
 
-.suggestions:hover {
-    background-color: grey;
-}
-
-.suggestions {
+.search-results tr {
     cursor: pointer;
-    padding: 5px;
-}
-
-.search-list-item-name {
-    float: left;
-}
-
-.search-list-item-price {
-    float:right;
-}
-
-.search-list-item {
-    padding: 5px;
-    cursor: pointer;
-}
-
-.search-list-item:hover {
-    background-color: grey;
 }
 
 /****** Drug Display ********/
 
-.display-item {
-    width: 100%;
-}
-
-td.label {
-    border-right: 1px solid #cfcfcf;
+td.drug-item-label {
     text-align: right;
-    color: #0FB29D;
-    background-color: #f2f4f3;
-    vertical-align: top;
+    color: #131313;
+    font-weight: bold;
+    width: 20%;
 }
 
-td.value {
+td.drug-item-value {
+    width: 80%;
 }

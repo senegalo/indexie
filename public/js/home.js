@@ -29,6 +29,27 @@
 
             });
         }
+        
+        $(".back-button").on({
+            click: function(){
+                location.href = Indexie.config.baseURL + "/search/i/" + $(this).data("query");
+            }
+        });
+        
+        $(".back-drug-button").on({
+            click: function(){
+                location.href = Indexie.config.baseURL + "/drug/i/" + $(this).data("altid");
+            }
+        });
+        
+        $("#search-form").on({
+            submit: function(event){
+                location.href = Indexie.config.baseURL + "/search/i/" + $("#search-box").val();
+                event.preventDefault();
+                return false;
+            }
+        });
+        
     });
 
 }(jQuery));

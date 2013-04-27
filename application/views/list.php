@@ -1,7 +1,4 @@
-
-<?php $this->load->view("home", array("query"=>$query)); ?>
-
-<table class="table table-hover table-striped">
+<table class="table table-hover table-striped search-results">
 
     <?php
     foreach ($list as $result):
